@@ -1,0 +1,194 @@
+/* --- Animation Definition --- */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* --- Global Variables & Desktop Hiding --- */
+:root {
+    --bottom-menu-height: 69px; 
+}
+
+/* --- Desktop Hiding --- */
+.gpf-container {
+    display: none;
+}
+
+/* --- Mobile & Tablet Styles --- */
+@media (max-width: 1024px) {
+    body.gpf-feed-active {
+        overflow: hidden;
+    }
+
+    .gpf-container {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        padding-bottom: var(--bottom-menu-height); 
+        box-sizing: border-box; /* Important for padding calculation */
+        z-index: 1;
+        background-color: transparent;
+    }
+
+    .gpf-wideo-feed, .swiper-slide {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .gpf-video-wrapper {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .gpf-video-wrapper video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+    }
+
+    /* --- Controls Positioning --- */
+    .gpf-top-controls {
+        position: absolute;
+        top: 20px;
+        /* MODIFIED: Centering logic */
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 5;
+    }
+
+    .gpf-bottom-controls {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Article Link Styles */
+    .gpf-article-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: #fff;
+        color: #000;
+        padding: 8px 12px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .gpf-article-link .gpf-icon svg {
+        width: 18px;
+        height: 18px;
+        fill: #1877F2;
+    }
+
+    /* --- NEW: Swipe Arrow Styles --- */
+    .gpf-swipe-arrow {
+        position: absolute;
+        bottom: 75px; /* Position it above the timeline */
+        transform: translateX(-50%);
+        z-index: 5;
+        pointer-events: none; /* So it doesn't block clicks */
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6));
+        
+        /* Hide by default */
+        display: none;
+    }
+
+    .gpf-swipe-arrow svg {
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+    }
+    
+    /* Only show and animate the arrow on the FIRST slide */
+    .swiper-slide:first-child .gpf-swipe-arrow {
+        display: block;
+        animation: jump 1.8s infinite ease-in-out;
+        animation-delay: 1s; /* Start jumping after 1 second */
+    }
+
+    /* Central Play/Pause Icon */
+    .gpf-play-pause-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    .gpf-play-pause-icon.visible { opacity: 1; }
+    .gpf-play-pause-icon svg { fill: #fff; }
+
+    /* Mute Toggle (Top right) */
+    .gpf-mute-toggle {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .gpf-mute-toggle svg { fill: #fff; }
+
+    /* Bottom Controls Content */
+    .gpf-info-container { display: flex; justify-content: flex-end; }
+    .gpf-share-button { background: rgba(0,0,0,0.4); border: none; cursor: pointer; padding: 8px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+    .gpf-share-button svg { fill: #fff; width: 24px; height: 24px; }
+    .gpf-timeline-container { width: 100%; display: flex; align-items: center; gap: 10px; height: 20px; opacity: 0; pointer-events: none; transition: opacity 0.4s ease-in-out; background-color: rgba(0,0,0,0.3); padding: 5px; border-radius: 5px; }
+    .gpf-timeline-container.visible { opacity: 1; pointer-events: auto; }
+    .gpf-current-time, .gpf-duration { color: #fff; font-size: 0.8rem; font-family: monospace; }
+    .gpf-progress-bar { flex-grow: 1; height: 4px; background-color: rgba(255, 255, 255, 0.3); border-radius: 2px; cursor: pointer; }
+    .gpf-progress { width: 0; height: 100%; background-color: #fff; border-radius: 2px; }
+
+    /* Share Overlay Styles (no changes) */
+    .gpf-share-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: #fff; z-index: 100000; flex-direction: column; align-items: center; padding: 20px; box-sizing: border-box; }
+    .gpf-share-overlay.active { display: flex; }
+    .gpf-close-share { position: absolute; top: 15px; right: 15px; font-size: 2.5rem; color: #333; background: none; border: none; cursor: pointer; }
+    .gpf-share-content { margin-top: 60px; text-align: center; width: 100%; }
+    .gpf-share-content h3 { color: #000; font-size: 1.5rem; margin-bottom: 30px; }
+    .gpf-share-links { display: flex; flex-direction: column; gap: 15px; width: 80%; margin: 0 auto; }
+    .gpf-share-links a, .gpf-share-links button { text-decoration: none; color: #fff; background-color: #333; padding: 15px; border-radius: 8px; font-size: 1rem; font-weight: bold; border: none; cursor: pointer; }
+    .gpf-share-links a:nth-child(1) { background-color: #1877F2; }
+    .gpf-share-links a:nth-child(2) { background-color: #1DA1F2; }
+    .gpf-share-links a:nth-child(3) { background-color: #0084FF; }
+    .gpf-share-links a:nth-child(4) { background-color: #25D366; }
+}

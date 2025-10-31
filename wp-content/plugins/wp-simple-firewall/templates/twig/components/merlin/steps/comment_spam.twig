@@ -1,0 +1,33 @@
+{% extends '/components/merlin/steps/base.twig' %}
+
+{% block slide_body_video_section_blurb %}
+	<p>Nearly 100% of comments SPAM is by automated BOTS.
+	   Shield will block all of this bot SPAM, using our exclusive <strong>silentCAPTCHA</strong> technology
+		that's GDPR-compliant, and completely invisible to your visitors.
+	</p>
+{% endblock %}
+
+{% block slide_body_action_area %}
+	{% import '/common/macros.twig' as icwp_macros %}
+
+	<form class="form-horizontal merlin-form ajax-form">
+		{{ icwp_macros.formInput_Hidden( 'step_slug', vars.step_slug ) }}
+
+		<div class="row">
+			<div class="col mb-2">
+				<h6 class="pb-1 border-bottom d-inline-block">Comment SPAM Settings</h6>
+			</div>
+		</div>
+
+		{{ icwp_macros.formInput_Checkbox(
+			'CommentsFilterOption', 'Y', 'Comment SPAM',
+			'Protect WordPress Comments from bot SPAM',
+			"silentCAPTCHA will detect bots that attempt to post comment SPAM to your site, without challenging your legitimate visitors."
+			~' [<a href="https://silentcaptcha.com/" target="_blank">more info</a>]',
+			null, true, 'me-0'
+		) }}
+
+		{{ icwp_macros.formInput_Submit2( 'Block Comment SPAM', null, 'secondary', false ) }}
+	</form>
+
+{% endblock %}

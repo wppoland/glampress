@@ -1,0 +1,137 @@
+# Translation of Plugins - WPS Hide Login - Stable (latest release) in Polish
+# This file is distributed under the same license as the Plugins - WPS Hide Login - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-03 16:32:26+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n == 1) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: pl\n"
+"Project-Id-Version: Plugins - WPS Hide Login - Stable (latest release)\n"
+
+#: classes/plugin.php:392
+msgid "WPBoutik"
+msgstr "WPBoutik"
+
+#: classes/plugin.php:392
+msgid "You want to find out how to simplify ecommerce with WordPress, try"
+msgstr "Jeśli chcesz dowiedzieć się, jak uprościć handel elektroniczny za pomocą WordPressa, wypróbuj"
+
+#: classes/plugin.php:874
+msgid "WPS Hide Login : Please note that the comment_registration option “Users must be registered and logged in to comment” is activated on your site, the connection link will not be hidden on the comments block."
+msgstr "WPS Hide Login: Proszę zauważyć, że opcja comment_registration „Użytkownicy muszą być zarejestrowani i zalogowani, aby komentować” jest włączona na twojej witrynie, odnośnik do połączenia nie będzie ukryty w bloku komentarzy."
+
+#: classes/plugin.php:847
+msgid "WPS Hide Login : Please note, if you check the comment_registration option \"Users must be registered and logged in to comment\", the login link will not be hidden on the comment block."
+msgstr "WPS Hide Login: Proszę zauważyć, że jeśli zaznaczysz opcję comment_registration \"Użytkownicy muszą być zarejestrowani i zalogowani, aby skomentować\", odnośnik do logowania nie będzie ukryty w bloku komentarza."
+
+#. Author of the plugin
+#: wps-hide-login.php
+msgid "WPServeur, NicolasKulka, wpformation"
+msgstr "WPServeur, NicolasKulka, wpformation"
+
+#: classes/plugin.php:436
+msgid "Redirect URL when someone tries to access the wp-login.php page and the wp-admin directory while not logged in."
+msgstr "Adres URL przekierowania, gdy ktoś spróbuje uzyskać dostęp to strony wp-login.php lub katalogu wp-admin, a nie jest zalogowany."
+
+#: classes/plugin.php:421
+msgid "Protect your website by changing the login URL and preventing access to the wp-login.php page and the wp-admin directory to non-connected people."
+msgstr "Chroń swoją witrynę, zmieniając adres URL do strony logowania i uniemożliwiając dostęp do strony wp-login.php oraz katalogu wp-admin osobom niezalogowanym."
+
+#: classes/plugin.php:391
+msgid "WPS Limit Login"
+msgstr "WPS Limit Login"
+
+#: classes/plugin.php:391
+msgid "and"
+msgstr "oraz"
+
+#: classes/plugin.php:390
+msgid "WPS Cleaner"
+msgstr "WPS Cleaner"
+
+#: classes/plugin.php:389
+msgid "WPS Bidouille"
+msgstr "WPS Bidouille"
+
+#: classes/plugin.php:389 classes/plugin.php:390
+msgid "the plugin"
+msgstr "wtyczka"
+
+#: classes/plugin.php:388
+msgid "Discover our other plugins:"
+msgstr "Odkryj nasze pozostałe wtyczki:"
+
+#: classes/plugin.php:387
+msgid "WordPress specialized hosting"
+msgstr "Specjalistyczny hosting WordPress"
+
+#: classes/plugin.php:303
+msgid "Redirection url"
+msgstr "Adres URL przekierowania"
+
+#: classes/plugin.php:252
+msgid "Redirection url default"
+msgstr "Domyślny adres URL przekierowania"
+
+#. Author URI of the plugin
+#: wps-hide-login.php
+msgid "https://wpserveur.net"
+msgstr "https://wpserveur.net"
+
+#: classes/plugin.php:540
+msgid "This has been disabled"
+msgstr "Ten element został wyłączony"
+
+#. Description of the plugin
+#: wps-hide-login.php
+msgid "Protect your website by changing the login URL and preventing access to wp-login.php page and wp-admin directory while not logged-in"
+msgstr "Chroń swoją stronę zmieniając URL logowania oraz blokując dostęp do wp-login.php oraz katalogu wp-admin dla niezalogowanych"
+
+#: classes/plugin.php:461 classes/plugin.php:465
+msgid "Settings"
+msgstr "Ustawienia"
+
+#. Plugin Name of the plugin
+#: wps-hide-login.php classes/plugin.php:222 classes/plugin.php:245
+#: classes/plugin.php:734 classes/plugin.php:743
+msgid "WPS Hide Login"
+msgstr "WPS Hide Login"
+
+#: classes/plugin.php:450
+msgid "Your login page is now here: <strong><a href=\"%1$s\">%2$s</a></strong>. Bookmark this page!"
+msgstr "Twoja strona logowania znajduje się tu: <strong><a href=\"%1$s\">%2$s</a></strong>. Dodaj ją do zakładek!"
+
+#: classes/plugin.php:246
+msgid "This option allows you to set a networkwide default, which can be overridden by individual sites. Simply go to to the site’s permalink settings to change the url."
+msgstr "Ta opcja pozawlana na ustawienie globalnych ustawień domyślnych, które moją być dostosowane dla poszczególnych stron. Przejdź do ustawień strony aby zmienić jej URL."
+
+#: classes/plugin.php:228
+msgid "WPS Hide Login could not be activated because you already have Rename wp-login.php active. Please uninstall rename wp-login.php to use WPS Hide Login"
+msgstr "Wtyczka WPS Hide Login nie może być aktywowana, ponieważ masz już aktywną wtyczkę Rename wp-login.php. Odinstaluj Rename wp-login.php aby używać WPS Hide Login"
+
+#: classes/plugin.php:222
+msgid "Please upgrade to the latest version of WordPress to activate"
+msgstr "Zaktualizuj WordPress do najnowszej wersji, aby aktywować"
+
+#: classes/plugin.php:498
+msgid "This feature is not enabled."
+msgstr "Funkcja nie jest dostępna."
+
+#: classes/plugin.php:401
+msgid "To set a networkwide default, go to <a href=\"%s\">Network Settings</a>."
+msgstr "Aby ustawić domyślną wartość w całej sieci witryn, skonfiguruj <a href=\"%s\">Ustawienia sieci</a>."
+
+#: classes/plugin.php:295
+msgid "Login url"
+msgstr "Adres URL logowania"
+
+#: classes/plugin.php:250
+msgid "Networkwide default"
+msgstr "Domyśla wartość całej sieci"
+
+#: classes/plugin.php:247 classes/plugin.php:387
+msgid "Need help? Try the <a href=\"%1$s\" target=\"_blank\">support forum</a>. This plugin is kindly brought to you by <a href=\"%2$s\" target=\"_blank\">WPServeur</a>"
+msgstr "Potrzebujesz pomocy? Wypróbuj<a href=\"%1$s\" target=\"_blank\">forum wsparcia</a>. Wtyczka została dostarczona przez <a href=\"%2$s\" target=\"_blank\">WPServeur</a>"

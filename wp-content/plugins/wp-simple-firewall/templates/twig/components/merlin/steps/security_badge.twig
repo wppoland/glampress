@@ -1,0 +1,29 @@
+{% extends '/components/merlin/steps/base.twig' %}
+
+{% block slide_body_video_section_blurb %}
+	<p>Shield's Security Badge demonstrates that you take security seriously,
+	   both for yourself and also for your customers.</p>
+	<p>Turning this option on will add a translucent badge to the footer of your website.</p>
+{% endblock %}
+
+{% block slide_body_action_area %}
+	{% import '/common/macros.twig' as icwp_macros %}
+
+	<form class="form-horizontal merlin-form ajax-form">
+		{{ icwp_macros.formInput_Hidden( 'step_slug', vars.step_slug ) }}
+
+		<div class="row">
+			<div class="col mb-2">
+				<h6 class="pb-1 border-bottom d-inline-block">Display Security Badge</h6>
+			</div>
+		</div>
+
+		{{ icwp_macros.formInput_Checkbox(
+			'SecurityPluginBadge', 'Y', 'Security Badge',
+			'Display Security Badge To Visitors',
+			'', null, true, 'me-0'
+		) }}
+
+		{{ icwp_macros.formInput_Submit2( 'Set Security Badge', null, 'secondary', false ) }}
+	</form>
+{% endblock %}
