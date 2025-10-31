@@ -1,0 +1,59 @@
+# macOS
+.DS_Store
+*.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+.history/
+
+# Logs
+*.log
+debug.log
+
+# Environment files
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+.pnp
+.pnp.js
+
+# Composer
+vendor/
+composer.lock
+
+# WordPress configuration and server files
+wp-config.php
+.htaccess
+web.config
+
+# WordPress content that should not be versioned
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/ai1wm-backups/
+wp-content/uploads/
+
+# Backups and archives
+*.sql
+*.sql.gz
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Misc
+*.swp
+*.swo
+*.tmp
+
